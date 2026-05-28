@@ -1,0 +1,1566 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "updatedAt": "2026-05-28T12:07:06Z",
+  "topic": "x0x.commons.agent-conventions.v1",
+  "publisher": {
+    "name": "Jim Collinson",
+    "publicKey": null,
+    "publicKeyEncoding": null,
+    "keyId": null
+  },
+  "signature": {
+    "algorithm": null,
+    "value": null,
+    "encoding": "base64",
+    "canonicalization": "rfc8785-json-canonicalization",
+    "context": "x0x-agent-conventions-v1"
+  },
+  "manifest": {
+    "schemaVersion": 1,
+    "version": 1,
+    "updatedAt": "2026-05-28T12:07:06Z",
+    "topic": "x0x.commons.agent-conventions.v1",
+    "source": {
+      "derivedFrom": "Hightea src/skills-bridge.ts",
+      "sourcePackage": "skills@1.5.7",
+      "notes": "Initial seed from Hightea's vendored skills bridge. Entries are skills-only until directly verified against each agent vendor."
+    },
+    "agents": [
+      {
+        "id": "aider-desk",
+        "displayName": "AiderDesk",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.aider-desk"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.aider-desk/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "amp",
+        "displayName": "Amp",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${XDG_CONFIG_HOME:-$HOME/.config}/amp"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${XDG_CONFIG_HOME:-$HOME/.config}/agents/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "antigravity",
+        "displayName": "Antigravity",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.gemini/antigravity"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.gemini/antigravity/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "augment",
+        "displayName": "Augment",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.augment"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.augment/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "bob",
+        "displayName": "IBM Bob",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.bob"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.bob/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "claude-code",
+        "displayName": "Claude Code",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "openclaw",
+        "displayName": "OpenClaw",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.openclaw"
+            },
+            {
+              "type": "pathExists",
+              "path": "$HOME/.clawdbot"
+            },
+            {
+              "type": "pathExists",
+              "path": "$HOME/.moltbot"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.openclaw/skills",
+                "$HOME/.clawdbot/skills",
+                "$HOME/.moltbot/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "cline",
+        "displayName": "Cline",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.cline"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.agents/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "codearts-agent",
+        "displayName": "CodeArts Agent",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.codeartsdoer"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.codeartsdoer/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "codebuddy",
+        "displayName": "CodeBuddy",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$PWD/.codebuddy"
+            },
+            {
+              "type": "pathExists",
+              "path": "$HOME/.codebuddy"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.codebuddy/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "codemaker",
+        "displayName": "Codemaker",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.codemaker"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.codemaker/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "codestudio",
+        "displayName": "Code Studio",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.codestudio"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.codestudio/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "codex",
+        "displayName": "Codex",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${CODEX_HOME:-$HOME/.codex}"
+            },
+            {
+              "type": "pathExists",
+              "path": "/etc/codex"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${CODEX_HOME:-$HOME/.codex}/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "command-code",
+        "displayName": "Command Code",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.commandcode"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.commandcode/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "continue",
+        "displayName": "Continue",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$PWD/.continue"
+            },
+            {
+              "type": "pathExists",
+              "path": "$HOME/.continue"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.continue/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "cortex",
+        "displayName": "Cortex Code",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.snowflake/cortex"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.snowflake/cortex/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "crush",
+        "displayName": "Crush",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${XDG_CONFIG_HOME:-$HOME/.config}/crush"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${XDG_CONFIG_HOME:-$HOME/.config}/crush/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "cursor",
+        "displayName": "Cursor",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.cursor"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.cursor/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "deepagents",
+        "displayName": "Deep Agents",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.deepagents"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.deepagents/agent/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "devin",
+        "displayName": "Devin for Terminal",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${XDG_CONFIG_HOME:-$HOME/.config}/devin"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${XDG_CONFIG_HOME:-$HOME/.config}/devin/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "dexto",
+        "displayName": "Dexto",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.dexto"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.agents/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "droid",
+        "displayName": "Droid",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.factory"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.factory/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "firebender",
+        "displayName": "Firebender",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.firebender"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.firebender/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "forgecode",
+        "displayName": "ForgeCode",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.forge"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.forge/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "gemini-cli",
+        "displayName": "Gemini CLI",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.gemini"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.gemini/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "github-copilot",
+        "displayName": "GitHub Copilot",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.copilot"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.copilot/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "goose",
+        "displayName": "Goose",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${XDG_CONFIG_HOME:-$HOME/.config}/goose"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${XDG_CONFIG_HOME:-$HOME/.config}/goose/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "hermes-agent",
+        "displayName": "Hermes Agent",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.hermes"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.hermes/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "junie",
+        "displayName": "Junie",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.junie"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.junie/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "iflow-cli",
+        "displayName": "iFlow CLI",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.iflow"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.iflow/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "kilo",
+        "displayName": "Kilo Code",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.kilocode"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.kilocode/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "kimi-cli",
+        "displayName": "Kimi Code CLI",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.kimi"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.config/agents/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "kiro-cli",
+        "displayName": "Kiro CLI",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.kiro"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.kiro/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "kode",
+        "displayName": "Kode",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.kode"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.kode/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "mcpjam",
+        "displayName": "MCPJam",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.mcpjam"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.mcpjam/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "mistral-vibe",
+        "displayName": "Mistral Vibe",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${VIBE_HOME:-$HOME/.vibe}"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${VIBE_HOME:-$HOME/.vibe}/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "mux",
+        "displayName": "Mux",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.mux"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.mux/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "opencode",
+        "displayName": "OpenCode",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "${XDG_CONFIG_HOME:-$HOME/.config}/opencode"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "openhands",
+        "displayName": "OpenHands",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.openhands"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.openhands/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "pi",
+        "displayName": "Pi",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.pi/agent"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.pi/agent/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "qoder",
+        "displayName": "Qoder",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.qoder"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.qoder/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "qwen-code",
+        "displayName": "Qwen Code",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.qwen"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.qwen/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "replit",
+        "displayName": "Replit",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$PWD/.replit"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "${XDG_CONFIG_HOME:-$HOME/.config}/agents/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "rovodev",
+        "displayName": "Rovo Dev",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.rovodev"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.rovodev/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "roo",
+        "displayName": "Roo Code",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.roo"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.roo/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "tabnine-cli",
+        "displayName": "Tabnine CLI",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.tabnine"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.tabnine/agent/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "trae",
+        "displayName": "Trae",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.trae"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.trae/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "trae-cn",
+        "displayName": "Trae CN",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.trae-cn"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.trae-cn/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "warp",
+        "displayName": "Warp",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.warp"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.agents/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "windsurf",
+        "displayName": "Windsurf",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.codeium/windsurf"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.codeium/windsurf/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "zencoder",
+        "displayName": "Zencoder",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.zencoder"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.zencoder/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "neovate",
+        "displayName": "Neovate",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.neovate"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.neovate/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "pochi",
+        "displayName": "Pochi",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.pochi"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.pochi/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      },
+      {
+        "id": "adal",
+        "displayName": "AdaL",
+        "status": "seeded",
+        "lastVerifiedAt": null,
+        "detection": {
+          "anyOf": [
+            {
+              "type": "pathExists",
+              "path": "$HOME/.adal"
+            }
+          ]
+        },
+        "assets": {
+          "skills": {
+            "paths": {
+              "default": [
+                "$HOME/.adal/skills"
+              ]
+            },
+            "format": "skill-directory",
+            "activation": "auto-discovery"
+          }
+        },
+        "capabilities": [
+          "skills"
+        ]
+      }
+    ]
+  }
+}
