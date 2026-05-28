@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "version": 1,
-  "updatedAt": "2026-05-28T12:07:06Z",
+  "updatedAt": "2026-05-28T14:09:10Z",
   "topic": "x0x.commons.agent-conventions.v1",
   "publisher": {
     "name": "Jim Collinson",
@@ -19,12 +19,16 @@
   "manifest": {
     "schemaVersion": 1,
     "version": 1,
-    "updatedAt": "2026-05-28T12:07:06Z",
+    "updatedAt": "2026-05-28T14:09:10Z",
     "topic": "x0x.commons.agent-conventions.v1",
     "source": {
       "derivedFrom": "Hightea src/skills-bridge.ts",
       "sourcePackage": "skills@1.5.7",
-      "notes": "Initial seed from Hightea's vendored skills bridge. Entries are skills-only until directly verified against each agent vendor."
+      "sourceUrl": "https://github.com/vercel-labs/skills",
+      "sourceVersion": "1.5.7",
+      "sourceLicense": "MIT",
+      "sourceLicenseNotice": "THIRD_PARTY_NOTICES.md",
+      "notes": "Initial seed from Hightea's vendored skills bridge, which is derived from vercel-labs/skills v1.5.7. Entries are skills-only until directly verified against each agent vendor."
     },
     "agents": [
       {
