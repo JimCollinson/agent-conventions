@@ -17,15 +17,37 @@ This repository is data-only. Consumers must treat catalogue files as structured
 {
   "schemaVersion": 1,
   "version": 1,
-  "updatedAt": "2026-05-28T12:07:06Z",
+  "updatedAt": "2026-05-28T14:09:10Z",
   "topic": "x0x.commons.agent-conventions.v1",
   "source": {
     "derivedFrom": "Hightea src/skills-bridge.ts",
-    "sourcePackage": "skills@1.5.7"
+    "sourcePackage": "skills@1.5.7",
+    "sourceUrl": "https://github.com/vercel-labs/skills",
+    "sourceVersion": "1.5.7",
+    "sourceLicense": "MIT",
+    "sourceLicenseNotice": "THIRD_PARTY_NOTICES.md",
+    "notes": "Initial seed from Hightea's vendored skills bridge, which is derived from vercel-labs/skills v1.5.7. Entries are skills-only until directly verified against each agent vendor."
   },
   "agents": []
 }
 ```
+
+### Source attribution
+
+The top-level `source` block records upstream provenance for catalogue
+contents. When the catalogue contains data derived from external sources,
+the following fields should be populated:
+
+- `derivedFrom`: free-text human description of the immediate source.
+- `sourcePackage`: name and version of the upstream package, if applicable.
+- `sourceUrl`: canonical upstream URL.
+- `sourceVersion`: upstream version identifier.
+- `sourceLicense`: SPDX identifier of the upstream license.
+- `sourceLicenseNotice`: path within this repository to the full notice file.
+- `notes`: any additional provenance context.
+
+Consumers should not rely on these fields to make licensing decisions about
+their own use of the catalogue. They exist for human audit.
 
 Each agent entry contains:
 

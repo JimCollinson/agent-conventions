@@ -2,7 +2,7 @@
 
 Declarative catalogue of AI coding-agent filesystem conventions: detection rules, placement paths, asset formats, and capability flags.
 
-The first consumer is Hightea. The catalogue is initially private under `JimCollinson/agent-conventions`; transfer to Saorsa Labs, WithAutonomi, or x0x remains a later decision once the catalogue has proved useful.
+The first consumer is Hightea. The catalogue currently lives at `JimCollinson/agent-conventions`; transfer to Saorsa Labs, WithAutonomi, or x0x remains a later decision once the catalogue has proved useful.
 
 ## What This Is
 
@@ -28,6 +28,20 @@ The first consumer is Hightea. The catalogue is initially private under `JimColl
 ## Branches
 
 The default branch is `main`, matching the Saorsa Labs / WithAutonomi convention.
+
+## Attribution
+
+The 54 agent entries seeded in `manifest.json` are derived from the internal
+agent table of [`vercel-labs/skills`](https://github.com/vercel-labs/skills)
+v1.5.7 (the `skills.sh` CLI), which is declared MIT-licensed.
+
+See [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) for the full
+attribution and license text.
+
+Each agent product named in the catalogue (Cursor, Claude Code, Codex, and so
+on) is identified by its trademark or product name for nominative-use
+purposes only. Inclusion in this catalogue does not imply endorsement by, or
+affiliation with, any of these products' vendors.
 
 ## License
 
